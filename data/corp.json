@@ -1,0 +1,142 @@
+[
+  {
+    "id": 100000001,
+    "name": "Alice Johnson",
+    "username": "alicej",
+    "email": "alice.johnson@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000002,
+    "name": "Bob Smith",
+    "username": "bobsmith",
+    "email": "bob.smith@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000003,
+    "name": "Carol Lee",
+    "username": "caroll",
+    "email": "carol.lee@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000004,
+    "name": "David Brown",
+    "username": "davidb",
+    "email": "david.brown@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000005,
+    "name": "Eva Martinez",
+    "username": "evam",
+    "email": "eva.martinez@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000006,
+    "name": "Frank Wilson",
+    "username": "frankw",
+    "email": "frank.wilson@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000007,
+    "name": "Grace Kim",
+    "username": "gracek",
+    "email": "grace.kim@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000008,
+    "name": "Henry Adams",
+    "username": "henrya",
+    "email": "henry.adams@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000009,
+    "name": "Isabella Clark",
+    "username": "isabellac",
+    "email": "isabella.clark@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000010,
+    "name": "Jack Moore",
+    "username": "jackm",
+    "email": "jack.moore@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000011,
+    "name": "Kara Davis",
+    "username": "karad",
+    "email": "kara.davis@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000012,
+    "name": "Liam Thompson",
+    "username": "liamt",
+    "email": "liam.thompson@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000013,
+    "name": "Mia Evans",
+    "username": "miae",
+    "email": "mia.evans@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000014,
+    "name": "Noah White",
+    "username": "noahw",
+    "email": "noah.white@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000015,
+    "name": "Olivia King",
+    "username": "oliviak",
+    "email": "olivia.king@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000016,
+    "name": "Paul Wright",
+    "username": "paulw",
+    "email": "paul.wright@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000017,
+    "name": "Quinn Allen",
+    "username": "quinna",
+    "email": "quinn.allen@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000018,
+    "name": "Rachel Scott",
+    "username": "rachels",
+    "email": "rachel.scott@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000019,
+    "name": "Sam Turner",
+    "username": "samt",
+    "email": "sam.turner@corp.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 100000020,
+    "name": "Tina Morgan",
+    "username": "tinam",
+    "email": "tina.morgan@corp.com",
+    "password": "pass1234"
+  }
+]
