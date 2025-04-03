@@ -39,20 +39,17 @@ router.put("/:id", async (req, res) => {
   await fs.writeFile("./data/users.json", JSON.stringify(users), "utf-8");
   res.status(200).json({ Message: "updated user", users: users[index] });
 });
+
 router.delete("/:id", async (req, res) => {
-  const data = await fs.readFile("./data/users.json", "utf-8");
-  const users = JSON.parse(data);
-  const id = parseInt(req.params.id);
-  const index = users.findIndex((u) => u.id === id);
-  if (index === -1) {
-    return res.status(400).json({ Message: "could not find any user" });
+  try {
+    const result = await User.findByIdAndDelete(req.params.id);
+    if (!result) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    res.json({ message: "User deleted", success: true });
+  } catch (err) {
+    res.status(400).json({ message: "Invalid ID", error: err });
   }
-
-  users.splice(index, 1);
-
-  await fs.writeFile("./data/users.json", JSON.stringify(users), "utf-8");
-
-  res.status(200).json({ Message: "user was deleted", success: true });
 });
 
 export default router;
