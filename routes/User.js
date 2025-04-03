@@ -3,11 +3,11 @@ const router = express.Router();
 import fs from "fs/promises";
 import dotenv from "dotenv";
 dotenv.config();
+import User from "../models/User.js";
 
 router.get("/", async (req, res) => {
   try {
-    const data = await fs.readFile("./data/users.json", "utf-8");
-    const users = JSON.parse(data);
+    const users = await User.find();
     res.status(200).json({ success: true, users });
   } catch (err) {
     res.status(500).json({ success: false, err });
@@ -16,15 +16,11 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const data = await fs.readFile("./data/users.json", "utf-8");
-    const users = JSON.parse(data);
-    const { id, name, email, isAdmin, password } = req.body;
-    const newUser = { id, name, email, isAdmin, password };
-    users.push(newUser);
-    const JsonUsers = JSON.stringify(users);
-    await fs.writeFile("./data/users.json", JsonUsers, "utf-8");
-
-    res.status(201).json({ Message: "user was created ", success: true });
+    const user = new User(req.body);
+    const savedUser = await user.save();
+    res
+      .status(201)
+      .json({ Message: "user was created ", savedUser, success: true });
   } catch (err) {
     res.status(400).json({ Message: " Something went wrong", err });
   }
