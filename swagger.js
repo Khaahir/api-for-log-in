@@ -10,7 +10,7 @@ const options = {
       description: "API för att hantera användare",
     },
   },
-  apis: ["./routes/*.js"], // ändra om dina routes ligger på annan plats
+  apis: ["./routes/*.js"],
 };
 
 const swaggerSpec = swaggerJsdoc(options);
