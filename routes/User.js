@@ -4,6 +4,15 @@ import fs from "fs/promises";
 import dotenv from "dotenv";
 dotenv.config();
 import User from "../models/User.js";
+/**
+ * @swagger
+ * /api/users:
+ *   get:
+ *     summary: Hämta alla användare
+ *     responses:
+ *       200:
+ *         description: En lista med användare
+ */
 
 router.get("/", async (req, res) => {
   try {
@@ -14,6 +23,26 @@ router.get("/", async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/users:
+ *   post:
+ *     summary: Skapa en ny användare
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *     responses:
+ *       201:
+ *         description: Användare skapad
+ */
 router.post("/", async (req, res) => {
   try {
     const user = new User(req.body);
@@ -39,7 +68,21 @@ router.put("/:id", async (req, res) => {
   await fs.writeFile("./data/users.json", JSON.stringify(users), "utf-8");
   res.status(200).json({ Message: "updated user", users: users[index] });
 });
-
+/**
+ * @swagger
+ * /api/users/{id}:
+ *   delete:
+ *     summary: Ta bort en användare
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Användare borttagen
+ */
 router.delete("/:id", async (req, res) => {
   try {
     const result = await User.findByIdAndDelete(req.params.id);
